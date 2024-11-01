@@ -22,13 +22,14 @@ Execute the C Program for the desired output.
 
 ## C program that receives a message from message queue and display them :
 # writer.c :
-
-// C Program for Message Queue (Writer Process) 
+// C Program for Message Queue (Writer Process)
+```
 #include <stdio.h> 
 #include <sys/ipc.h> 
 #include <sys/msg.h> 
-
-// structure for message queue 
+```
+## structure for message queue 
+```
 struct mesg_buffer { 
 	long mesg_type; 
 	char mesg_text[100]; 
@@ -51,9 +52,9 @@ int main()
 	return 0; 
 }
 
-
+```
 # reader.c :
-
+```
 // C Program for Message Queue (Reader Process)
 #include <stdio.h>
 #include <sys/ipc.h>
@@ -83,8 +84,7 @@ int main()
 	msgctl(msgid, IPC_RMID, NULL);
 	return 0;
 }
-
-
+```
 ## OUTPUT :
 
 ![image](https://github.com/user-attachments/assets/e40abf99-3bb1-40b1-88ab-f6e4d7241988)
